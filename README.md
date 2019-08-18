@@ -1,10 +1,9 @@
-# WinInfoServer
-WininfoServer is used  to get the system information by using win32 classes 
+# WinInfoServer    
+WinInfoServer query the system information by WMI(Windows Management Instrumentation ).
+# common request structure:
+          
+          {"win32classname":"class name","props":[] }  
+Example:
+       To get all printers name,installed system name, Send a request in following format  
 
-# Request Structure to get sys info.
-    {"win32classname":"","props":[]}
-   
-   example:
-    to get all printers names
-    {"win32classname":"Win32_Printer","Props":["Name"]}
-    
+        {"win32classname":"Win32_Printer","props":["Name","SystemName"]
